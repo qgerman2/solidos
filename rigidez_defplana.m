@@ -1,7 +1,6 @@
 %matriz de rigidez para pasar deformaciones a esfuerzos
 %caso deformacion plana ezz=exz=eyz=0
-%young en MPa
-%al multiplicar, las deformaciones axiales deben estar en gama (gama = 2 * epsilon)
+%young en MPa, deformacion axial en epsilon (epsilon = gama / 2)
 function r = rigidez_defplana(young, poisson)
     r_general = rigidez(young, poisson);
     r = r_general;

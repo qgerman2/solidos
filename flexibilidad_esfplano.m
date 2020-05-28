@@ -1,7 +1,6 @@
 %matriz de flexibilidad para pasar esfuerzos a deformaciones
 %caso esfuerzo plano ozz=oxz=oyz=0
-%young en MPa
-%al multiplicar el resultado entregara las deformaciones axiales como gama (gama = 2 * epsilon)
+%young en MPa, deformacion axial en epsilon (epsilon = gama / 2)
 function f = flexibilidad_esfplano(young, poisson)
     f_general = flexibilidad(young, poisson);
     f = f_general;
