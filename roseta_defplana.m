@@ -18,8 +18,9 @@ function [e, o] = roseta_defplana(a1, a2, a3, e1, e2, e3, young, poisson)
     oyy = lambda * S.exx * (10 ^ -4) + (lambda + 2 * u) * S.eyy * (10 ^ -4);
     oxy = u * 2 * S.exy * (10 ^ -4);
     ozz = lambda * S.exx * (10 ^ -4) + lambda * S.eyy * (10 ^ -4);
-    e = [S.exx, S.exy;
-        S.exy, S.eyy];
+    e = [S.exx, S.exy, 0;
+        S.exy, S.eyy, 0;
+        0, 0, 0];
     o = [oxx, oxy, 0;
         oxy, oyy, 0;
         0, 0, ozz];

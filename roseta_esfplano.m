@@ -19,6 +19,7 @@ function [e, o] = roseta_esfplano(a1, a2, a3, e1, e2, e3, young, poisson)
     e = [S.exx, S.exy, 0;
         S.exy, S.eyy, 0;
         0, 0, ezz];
-    o = [oxx, oxy;
-        oxy, oyy];
+    o = [oxx, oxy, 0;
+        oxy, oyy, 0;
+        0, 0, 0];
 end
