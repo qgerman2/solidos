@@ -23,6 +23,4 @@ function [e, o] = roseta_defplana(a1, a2, a3, e1, e2, e3, young, poisson)
     o = [oxx, oxy, 0;
         oxy, oyy, 0;
         0, 0, ozz];
-    e
-    o
 end
