@@ -11,11 +11,11 @@ function [e, o] = roseta_esfplano(a1, a2, a3, e1, e2, e3, young, poisson)
     eqn3 = (exx + eyy) / 2 + (exx - eyy) / 2 * cos(2 * a3) + exy * sin(2 * a3) == e3;
     S = vpasolve(eqn1, eqn2, eqn3);
     %ecuaciones para encontrar esfuerzo plano a partir de deformacion
-    oxx = (young / (1 - poisson^2)) * (S.exx * (10 ^ -4) + poisson * S.eyy * (10 ^ -4));
-    oyy = (young / (1 - poisson^2)) * (poisson * S.exx * (10 ^ -4) + S.eyy * (10 ^ -4));
-    oxy = (young / (1 - poisson^2)) * (S.exy * (10 ^ -4) * (1 - poisson));
+    oxx = (young / (1 - poisson^2)) * (S.exx * (10 ^ -6) + poisson * S.eyy * (10 ^ -6));
+    oyy = (young / (1 - poisson^2)) * (poisson * S.exx * (10 ^ -6) + S.eyy * (10 ^ -6));
+    oxy = (young / (1 - poisson^2)) * (S.exy * (10 ^ -6) * (1 - poisson));
     %deformacion zz a partir de esfuerzos oxx y oyy (esfuerzo plano)
-    ezz = (1 / young) * (-poisson * (oxx + oyy)) * (10 ^ 4);
+    ezz = (1 / young) * (-poisson * (oxx + oyy)) * (10 ^ 6);
     e = [S.exx, S.exy, 0;
         S.exy, S.eyy, 0;
         0, 0, ezz];
