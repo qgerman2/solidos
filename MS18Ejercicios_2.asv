@@ -1,0 +1,16 @@
+%ejercicio 2
+
+%este ejercicio es mas rebuscar que programacion
+
+%con young, poisson, 2 rosetas perpendiculares y una condicion de esfuerzo
+%plano, podemos conocer la diagonal del tensor deformacion
+e_diag = roseta2_esfplano(30.88, 30.88, 210000, 0.3);
+
+%justo porque el esfuerzo yy es la mitad del esfuerzo xx, tenemos una
+%ecuacion de una sola variable, podemos relacionar las trazas del tensor
+%esfuerzo y del deformacion
+
+e_traza = e_diag(1) + e_diag(2) + e_diag(3);
+
+%p = K * e_traza = 1/3 * o_traza
+
