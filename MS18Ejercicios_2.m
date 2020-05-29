@@ -15,7 +15,7 @@ e_traza = e_diag(1) + e_diag(2) + e_diag(3);
 
 K = young / (3 * (1 - 2 * poisson));
 
-%p = K * e_traza = 1/3 * o_traza
+%K * e_traza = 1/3 * o_traza
 
 o_traza = 3 * K * e_traza;
 
