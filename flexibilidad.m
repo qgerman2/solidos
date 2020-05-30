@@ -1,3 +1,8 @@
+%****
+%las cosas suelen salir mal al usar esta matriz para casos de deformacion
+%plana, sugiero usar flexibilidad_defplana
+%****
+
 %matriz de flexibilidad para pasar esfuerzos a deformaciones
 %caso general
 %young en MPa, deformacion axial en epsilon (epsilon = gama / 2)

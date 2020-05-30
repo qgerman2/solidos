@@ -1,3 +1,8 @@
+%****
+%las cosas suelen salir mal al usar esta matriz para casos de esfuerzo
+%plano, sugiero usar rigidez_esfplano
+%****
+
 %matriz de rigidez para pasar deformaciones a esfuerzos
 %caso general
 %young en MPa, deformacion axial en epsilon (epsilon = gama / 2)
